@@ -1,0 +1,125 @@
+<resources>
+    <string name="application_name">SisGes ViewBinding</string>
+    <string name="app_name">SisGes</string>
+    <string name="app_name_subtitle">Product management system</string>
+    <string name="build_version">v %s</string>
+
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="new_account">Create new account</string>
+
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="register">Register</string>
+    <string name="already_has_an_account">Do you already have an account?\nLogin</string>
+
+    <string name="hello_user">Hello, %s</string>
+    <string name="products_in">Products in</string>
+    <string name="products_out">Products out</string>
+    <string name="move_products">Move products</string>
+    <string name="see_stocks">See stocks</string>
+    <string name="see_in_out">See in/out</string>
+
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+
+    <string name="new_password">New password</string>
+    <string name="take_picture">Take picture</string>
+    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="remove_profile_picture">Remove profile picture</string>
+    <string name="camera_permission_denied_message_profile_picture">In order to change your profile picture, you must accept permission to use the camera</string>
+    <string name="profile_picture_removed_successfully">The profile picture has been removed</string>
+    <string name="save">Save</string>
+
+    <string name="products_in_description">1. Scan or enter the product code\n
+        2. Enter total quantity to be stored</string>
+    <string name="products_in_shelf_description">1. Scan or enter the shelf code\n
+        2. Enter the quantity stored</string>
+    <string name="press_to_scan">Press to scan</string>
+    <string name="camera_permission_denied_message_scan">In order to scan, you must accept permission to use the camera</string>
+    <string name="product_code">Product code</string>
+    <string name="shelf_code">Shelf code</string>
+    <string name="quantity">Quantity</string>
+    <plurals name="products_in_left">
+        <item quantity="one">You still have %d product to store</item>
+        <item quantity="other">You still have %d products to store</item>
+    </plurals>
+    <string name="next">Next</string>
+    <string name="deposit">Deposit</string>
+
+    <string name="products_out_information">Product storage information</string>
+    <string name="products_out_description">1. Scan or enter the product code\n
+        2. Enter total quantity to be collected</string>
+    <string name="products_out_shelf_description">1. Scan or enter the shelf code\n
+        2. Enter the quantity collected</string>
+    <plurals name="products_out_left">
+        <item quantity="one">You still have %d product to collect</item>
+        <item quantity="other">You still have %d products to collect</item>
+    </plurals>
+    <string name="collect">Collect</string>
+
+    <string name="product_positions_title">%s\nstorage places</string>
+    <string name="product_positions_with_pieces">%s : %s</string>
+    <plurals name="pieces">
+        <item quantity="one">%d piece</item>
+        <item quantity="other">%d pieces</item>
+    </plurals>
+    <string name="pieces_many">%d pieces</string>
+
+    <string name="move_products_description">1. Scan or enter the product code\n
+        2. Scan or enter the current shelf code\n
+        3. Enter the quantity to be moved\n
+        4. Scan or enter the new shelf code</string>
+    <string name="current_shelf_code">Current shelf code</string>
+    <string name="new_shelf_code">New shelf code</string>
+    <string name="finish">Finish</string>
+
+    <string name="see_stocks_description">Scan or enter the product code/name</string>
+    <string name="product_code_or_name">Product code/name</string>
+    <string name="see_stock">See stock</string>
+
+    <string name="choose_product">Choose product</string>
+    <string name="code">Code</string>
+    <string name="name">Name</string>
+
+    <string name="code_colon">Code:</string>
+    <string name="total_quantity_colon">Total quantity:</string>
+    <string name="storage_positions_colon">Storage places:</string>
+
+    <string name="filters">Filters</string>
+    <string name="in_and_out">In/Out</string>
+    <string name="in">In</string>
+    <string name="out">Out</string>
+    <string name="product_name">Product name</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="apply_filters">Apply filters</string>
+    <string name="reset_filters">Reset filters</string>
+    <string name="quantity_short">Qty</string>
+    <string name="date_and_time">Date and time</string>
+    <string name="pieces_short">%d pcs</string>
+
+    <string name="error_all_fields_must_be_filled">All fields must be completed</string>
+    <string name="error_first_name_empty">First name is empty</string>
+    <string name="error_last_name_empty">Last name is empty</string>
+    <string name="error_email_wrong_format">Email address is not in the correct format</string>
+    <string name="error_password_too_short">Password must be at least 8 characters long</string>
+    <string name="error_product_code_needed">Fill in the product code</string>
+    <string name="error_wrong_product_code">Product code must consist of 10 digits</string>
+    <string name="error_product_does_not_exist_with_the_code">There is no product with this code</string>
+    <string name="error_quantity_needed">Fill in the quantity</string>
+    <string name="error_quantity_must_be_a_number">Quantity must be a number</string>
+    <string name="error_quantity_must_be_positive_number">Quantity must be a number greater than or equal to 0</string>
+    <string name="error_much_quantity_than_left_quantity">Quantity entered is greater than the remaining quantity</string>
+    <string name="error_much_quantity_than_total_quantity_at_shelf">Quantity entered is greater than the total quantity stored on the shelf</string>
+    <string name="error_shelf_code_needed">Fill in the shelf code</string>
+    <string name="error_shelf_does_not_exist_with_the_code">There is no shelf with this code</string>
+    <string name="error_current_shelf_code_needed">Fill in the code on the current shelf</string>
+    <string name="error_new_shelf_code_needed">Fill in the code on the new shelf</string>
+    <string name="error_wrong_shelf_code">Shelf code does not have the appropriate format (ZxRxRx, where x is a number)</string>
+    <string name="error_product_code_or_name_needed">Fill in the product code or name</string>
+    <string name="error_start_date_after_end_date">Start date must not be after end date</string>
+    <string name="error_end_date_before_start_date">End date must not be before start date</string>
+</resources>

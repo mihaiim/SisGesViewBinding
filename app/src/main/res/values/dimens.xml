@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="default_margin">20dp</dimen>
+    <dimen name="edit_text_height">48dp</dimen>
+    <dimen name="edit_text_padding">14dp</dimen>
+</resources>

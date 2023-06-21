@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_administrationFragment"
+            app:destination="@id/administrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.ScanFragment"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scanFragment_to_productPositionsFragment"
+            app:destination="@id/productPositionsFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_productsListFragment"
+            app:destination="@id/productsListFragment" />
+        <action
+            android:id="@+id/action_scanFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <argument
+            android:name="screenType"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productPositionsFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.ProductPositionsFragment"
+        tools:layout="@layout/fragment_product_positions">
+        <argument
+            android:name="productCode"
+            app:argType="string" />
+        <argument
+            android:name="productName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productsListFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.ProductsListFragment"
+        tools:layout="@layout/fragment_products_list">
+        <action
+            android:id="@+id/action_productsListFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <argument
+            android:name="searchTerm"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="productCode"
+            app:argType="string" />
+        <argument
+            android:name="productName"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/administrationFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.AdministrationFragment"
+        tools:layout="@layout/fragment_administration" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mihaiim.sisgesviewbinding.ui.fragments.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

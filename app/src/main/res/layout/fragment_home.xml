@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/default_margin">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/welcomeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/profilePictureIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/welcomeTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_default_profile_picture"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/productsIn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/profilePictureIv"
+            app:layout_constraintStart_toStartOf="@id/barrierStart"
+            app:layout_constraintEnd_toEndOf="@id/barrierEnd"
+            style="@style/PrimaryButton"
+            android:text="@string/products_in" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/productsOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/productsIn"
+            app:layout_constraintStart_toStartOf="@id/barrierStart"
+            app:layout_constraintEnd_toEndOf="@id/barrierEnd"
+            style="@style/PrimaryButton"
+            android:text="@string/products_out" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/moveProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/productsOut"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/PrimaryButton"
+            android:text="@string/move_products" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seeStocks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/moveProducts"
+            app:layout_constraintStart_toStartOf="@id/barrierStart"
+            app:layout_constraintEnd_toEndOf="@id/barrierEnd"
+            style="@style/PrimaryButton"
+            android:text="@string/see_stocks" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/seeInOut"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintTop_toBottomOf="@id/seeStocks"
+            app:layout_constraintStart_toStartOf="@id/barrierStart"
+            app:layout_constraintEnd_toEndOf="@id/barrierEnd"
+            style="@style/PrimaryButton"
+            android:text="@string/see_in_out" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="productsIn,
+                productsOut,
+                moveProducts,
+                seeStocks,
+                seeInOut" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="productsIn,
+                productsOut,
+                moveProducts,
+                seeStocks,
+                seeInOut" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
